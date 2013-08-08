@@ -3,7 +3,7 @@ cd $WERCKER_SOURCE_DIR
 if [ -f "requirements.txt" ]
 then
     debug "pip install -r requirements.txt"
-    PIP_DOWNLOAD_CACHE=$WERCKER_CACHE_DIR
+    export PIP_DOWNLOAD_CACHE=$WERCKER_CACHE_DIR
     export
     sudo pip install -r requirements.txt
 
