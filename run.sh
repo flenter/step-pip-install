@@ -7,7 +7,7 @@ then
     sudo pip install --download-cache=$WERCKER_SOURCE_DIR pip --upgrade
     sudo pip install --download-cache=$WERCKER_SOURCE_DIR setuptools --upgrade
     sudo pip install --download-cache=$WERCKER_SOURCE_DIR wheel
-    sudo pip install --download-cache=$WERCKER_SOURCE_DIR` --use-wheel -r requirements.txt 
+    sudo pip install --download-cache=$WERCKER_SOURCE_DIR --use-wheel -r requirements.txt 
 
     if [[ $? -ne 0 ]]
     then
