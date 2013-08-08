@@ -4,6 +4,7 @@ if [ -f "requirements.txt" ]
 then
     debug "pip install -r requirements.txt"
     PIP_DOWNLOAD_CACHE=$WERCKER_CACHE_DIR
+    export
     sudo pip install -r requirements.txt
 
     if [[ $? -ne 0 ]]
