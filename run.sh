@@ -3,7 +3,6 @@ cd $WERCKER_SOURCE_DIR
 if [ -f "requirements.txt" ]
 then
     debug "pip install with download cache"
-    ls -la $WERCKER_CACHE_DIR
     sudo pip install --download-cache=$WERCKER_CACHE_DIR -r requirements.txt 
 
     if [[ $? -ne 0 ]]
