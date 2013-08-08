@@ -4,7 +4,7 @@ if [ -f "requirements.txt" ]
 then
     debug "install pip-accell and use it to install packages from requirements.txt"
     export PIP_DOWNLOAD_CACHE=$WERCKER_CACHE_DIR
-    sudo pip install pip-accell
+    sudo pip install pip-accel
     sudo pip-accell install -r requirements.txt
 
     if [[ $? -ne 0 ]]
