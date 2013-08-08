@@ -5,7 +5,7 @@ then
     debug "pip install -r requirements.txt"
     pip --version
     pip install --no-install --use-mirrors -I --download=$WERCKER_CACHE_DIR pip
-    pip install --no-install --use-mirrors -I --download=$WERCKER_CACHE_DIR pip --upgrade
+    sudo pip install --find-links=file://$WERCKER_CACHE_DIR --no-index --use-wheel --index-url=file:///dev/null pip
     pip --version
     pip install --no-install --use-mirrors -I --download=$WERCKER_CACHE_DIR -r requirements.txt
     sudo pip install --find-links=file://$WERCKER_CACHE_DIR --no-index --use-wheel --index-url=file:///dev/null -r requirements.txt
